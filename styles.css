@@ -1,4 +1,6 @@
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -17,27 +19,56 @@ header {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    align-items: center;
+   
+    
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+   align-self: flex-end;
+    
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav a,.header-div a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+}
+.header-div {
+    background-color: black;
+    width: 100%;
+    height: 150%;
+    display: flex;
+    flex-direction:row;
+align-items: center;
+justify-content: center;
+gap:4rem;
+
+
+}
+.header-div a{
+    font-size: 1rem;
+}
+.header-div a:hover{
+   
+   
+    color: rgb(53, 51, 51);
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
+nav a:last-child{
     margin-right: 20px;
 }
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+nav a:hover{
+    color: #7c7878;
 }
-
 main {
     display: flex;
     justify-content: space-around;
@@ -52,10 +83,19 @@ main {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 15%;
+   max-height: 20%;
+   display: flex;
+   flex-direction: column;
+   
+   gap:10px;
+   
 }
-
+.img-container{
+    width: 100%;
+}
 .product img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -112,7 +152,9 @@ main {
     margin: 10px 0;
 }
 
-
+.show-icons{
+    display: none;
+}
 @media (max-width: 768px) {
     main {
         flex-direction: column;
@@ -121,7 +163,29 @@ main {
     .product {
         width: 100%;
     }
+    header{
+    width: 100%;
+    height: 100px;
+   
+    }
+    header h1{
+        font-size: 20px;
+        white-space: nowrap;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+    }
+    .header-div,nav{
+        display: none;
+
+    }
+    .show-icons{
+        display: inline;
+        background-color: transparent;
+
+
+        
+    }
 }
-.Login{
-    align-self: flex-end;
-}
+
